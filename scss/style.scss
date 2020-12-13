@@ -164,6 +164,7 @@ nav {
 }
 
 .label {
+    position: relative;
     margin: 0 auto;
     width: 112px;
     height: 24px;
@@ -174,9 +175,18 @@ nav {
     font-weight: 300;
     text-transform: uppercase;
     text-align: center;
+    z-index: 2;
+    &_white {
+        background-color: #fff;
+        color: #000;
+    }
+    &_min {
+        width: 76px;
+    }
 }
 
 .title {
+    position: relative;
     margin-bottom: 0;
     margin-top: 38px;
     color: #222222;
@@ -185,14 +195,23 @@ nav {
     line-height: 48px;
     text-align: center;
     text-transform: uppercase;
+    z-index: 2;
+    &_white {
+        color: #fff;
+    }
 }
 
 .subtitle {
+    position: relative;
     margin-top: 19px;
     color: #222222;
     font-size: 17px;
     font-weight: 400;
     text-align: center;
+    z-index: 2;
+    &_white {
+        color: #fff;
+    }
 }
 
 .reasons_block {
@@ -287,5 +306,35 @@ nav {
             border-radius: 100%;
             cursor: pointer;
         }
+    }
+}
+
+/* Choice */
+.choice {
+    position: relative;
+    min-height: 895px;
+    padding: 57px 0 138px 0;
+    background: url("../img/mobile_bg.png") center (center / cover) no-repeat;
+    img {
+        position: relative;
+        display: block;
+        margin: 56px auto 0 auto;
+        z-index: 2;
+    }
+    &_descr {
+        text-align: center;
+        color: #222222;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+    .black {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 499px;
+        width: 100%;
+        background-color: #070716;
+        z-index: 1;
     }
 }
